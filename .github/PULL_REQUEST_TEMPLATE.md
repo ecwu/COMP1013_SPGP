@@ -1,28 +1,34 @@
-<!--- Please briefly describe your changes in the title -->
+<!--- Provide a general summary of your changes in the Title above -->
 
 ## Description
-<!--- Describe the details of your changes -->
+<!--- Describe your changes in detail -->
 
-## Motivation or context
-- why do you do that? What do these problems solve?
-<!--- If you are fixing the problem, please paste the link here -->
+## Related Issue
+<!--- This project only accepts pull requests related to open issues -->
+<!--- If suggesting a new feature or change, please discuss it in an issue first -->
+<!--- If fixing a bug, there should be an issue describing it with steps to reproduce -->
+<!--- Please link to the issue here: -->
 
-## How to test the relevant code
-<!--- Please describe how to test your code, including your test environment and your test, the effect of your code, etc. -->
+## Motivation and Context
+<!--- Why is this change required? What problem does it solve? -->
 
-## screenshot (if convenient):
+## How Has This Been Tested?
+<!--- Please describe in detail how you tested your changes. -->
+<!--- Include details of your testing environment, and the tests you ran to -->
+<!--- see how your change affects other areas of the code, etc. -->
 
-## Change the type
-<!--- choose the type of your code, in front of the `[]` fill in a x can -->
+## Screenshots (if appropriate):
 
- - [ ] Fix Bug (fix the change of the problem)
- - [ ] new features (constantly changing, adding functionality)
- - [ ] Larger changes (fixes or features can cause changes to existing features)
+## Types of changes
+<!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to change)
 
 ## Checklist:
-<!--- Make sure to complete the following actions before submitting
-<!--- If you do not know these, do not be shy question! -->
- - [ ] my code follows the code style of the project
- - [ ] my code needs to change the document
- - [ ] I updated the document accordingly
- - [ ] my program has been successfully compiled and running locally
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+- [ ] My code follows the code style of this project.
+- [ ] My change requires a change to the documentation.
+- [ ] I have updated the documentation accordingly.
+- [ ] I have read the **CONTRIBUTING** document.
