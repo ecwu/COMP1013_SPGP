@@ -1,1 +1,9 @@
-# Contributing to Strugramming
+# Strugramming 代码规范
+
+## 如何在这个项目中添加新的代码
+### 添加新的功能
+1. 检查 `TODO.md` 文档，查看你想添加的功能是否在 `Working` 列表中。
+2. 如果你想添加的功能**不在** `Working` 列表中，请进入 `Issues` 并添加新的 issue 用于功能跟踪。
+3. 如果你想添加的功能**在** `Working` 列表中，请进入 `Issues` 阅读功能对应的 issue，并进行互动。
+
+> 一个新的功能**一定要有相应的 issue 用于代码追踪**。
