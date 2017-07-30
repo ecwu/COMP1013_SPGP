@@ -4,7 +4,7 @@
 <!--- Describe the details of your changes -->
 
 ## Motivation or context
- - why do you do that? What do these problems solve?
+- why do you do that? What do these problems solve?
 <!--- If you are fixing the problem, please paste the link here -->
 
 ## How to test the relevant code
@@ -21,7 +21,7 @@
 ## Checklist:
 <!--- Make sure to complete the following actions before submitting
 <!--- If you do not know these, do not be shy question! -->
- - [] my code follows the code style of the project
- - [] my code needs to change the document
- - [] I updated the document accordingly
- - [] my program has been successfully compiled and running locally
+- [] my code follows the code style of the project
+- [] my code needs to change the document
+- [] I updated the document accordingly
+- [] my program has been successfully compiled and running locally
