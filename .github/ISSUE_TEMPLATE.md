@@ -21,6 +21,6 @@
 
 ## Run Environment
 <!--- Include as many relevant details about the environment you experienced the bug in -->
-* Version used (e.g. 0.0.2):
-* Environment name and version (e.g. GCC 7.1 on Visual Studio 2017):
+* Version used:
+* Environment name and version:
 * Operating System and version:
