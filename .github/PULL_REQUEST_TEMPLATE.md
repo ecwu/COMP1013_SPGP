@@ -1,27 +1,27 @@
-<!--- 请在标题中简要描述你的更改 -->
+<! Please briefly describe your changes in the title ->
 
-## 描述
-<!--- 详细描述你更改的内容 -->
+## Description
+<! --- Describe the details of your changes ->
 
-## 动机或前后关系
-<!--- 为什么要这么做？这么做解决了什么问题？ -->
-<!--- 如果是修复问题，请在此粘贴链接 -->
+## Motivation or context
+ - why do you do that? What do these problems solve?
+<! --- If you are fixing the problem, please paste the link here ->
 
-## 如何测试相关代码
-<!--- 请描述如何测试你的代码，包括你的测试环境和你的测试、你的代码产生的效果等等 -->
+## How to test the relevant code
+<! --- Please describe how to test your code, including your test environment and your test, the effect of your code, etc. ->
 
-## 截图 (如果方便的话):
+## screenshot (if convenient):
 
-## 变更类型
-<!--- 选择你的代码的类型，在前面的 `[ ]` 中填入一个 x 即可 -->
-- [ ] 修复Bug (non-breaking change which fixes an issue)
-- [ ] 新特性 (non-breaking change which adds functionality)
-- [ ] 较大变化 (fix or feature that would cause existing functionality to change)
+## Change the type
+<! --- choose the type of your code, in front of the `` `fill in a x can ->
+ - [] Fix Bug (fix the change of the problem)
+ - [] new features (constantly changing, adding functionality)
+ - [] Larger changes (fixes or features can cause changes to existing features)
 
-## 检查清单:
-<!--- 提交前确保完成下述动作 -->
-<!--- 如果你不清楚这些，不要害羞提问吧! -->
-- [ ] 我的代码遵循了项目的代码风格
-- [ ] 我的代码需要更改文档
-- [ ] 我相应的更新了文档
-- [ ] 我的程序已经在本地正常编译并运行
+## Checklist:
+<! Make sure to complete the following actions before submitting
+<! --- If you do not know these, do not be shy question! ->
+ - [] my code follows the code style of the project
+ - [] my code needs to change the document
+ - [] I updated the document accordingly
+ - [] my program has been successfully compiled and running locally
