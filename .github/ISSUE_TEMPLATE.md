@@ -1,4 +1,5 @@
 <!--- Provide a general summary of the issue in the Title above -->
+
 ## Expected Behavior
 <!--- If you're describing a bug, tell us what should happen -->
 <!--- If you're suggesting a change/improvement, tell us how it should work -->
@@ -19,8 +20,13 @@
 3.
 4.
 
-## Run Environment
+## Context
+<!--- How has this issue affected you? What are you trying to accomplish? -->
+<!--- Providing context helps us come up with a solution that is most useful in the real world -->
+
+## Your Environment
 <!--- Include as many relevant details about the environment you experienced the bug in -->
 * Version used:
-* Environment name and version:
-* Operating System and version:
+* Environment name and version (e.g. Chrome 39, node.js 5.4):
+* Operating System and version (desktop or mobile):
+* Link to your project:
