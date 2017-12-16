@@ -1,4 +1,4 @@
-Name	ID     
-Tony	1234         
-Andrew	2345     
-Amy	3456
+Name      ID
+Tony      1234
+Andrew    2345
+Amy       3456

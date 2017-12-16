@@ -1,0 +1,4 @@
+Name      ID    Assignment1  Assignment2  Assignment3  
+Tony      1234  3.5          4            3.5          
+Andrew    2345  4            3            2.5          
+Amy       3456  2            3.5          4            
