@@ -9,20 +9,20 @@
 #include <string.h>
 #include <math.h>
 
-void function_list();
+void listFunction();
 
 int main(){
-	char version[] = "0.0.1"; 
+	char version[] = "0.0.1";
 	printf("Welcome to Score Management System %s\n\n\n", version);
 
 	while (1) {
-		function_list();
+		listFunction();
 	}
 
 	return 0;
 }
 
-void function_list() {
+void listFunction() {
 	int i;
 
 	do {
@@ -47,7 +47,7 @@ void function_list() {
 
 		switch (i) {
 
-			default: printf("Number should between 1 -- 5!\n");
+			default: printf("Number should between 1 -- 4!\n");
 		}
 
 	} while (1);
