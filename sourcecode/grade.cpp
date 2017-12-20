@@ -18,7 +18,7 @@ struct stuNMarks{
 
 int gradeFunction();
 int loadStudentList(struct stu *studentList, int *stuNumber);
-int loadStudentMarks(struct stuNMarks *studentMarks, int *assignmentStatus);
+int loadStudentMarks(struct stuNMarks *studentMarks, struct stu *studentList, int* assignmentStatus, int stuNumber);
 
 int main(){
     int input = 0;
@@ -37,10 +37,15 @@ int gradeFunction(){
     struct stu studentList[20];
     struct stuNMarks studentMarks[20];
     int assignmentStatus[5] = {0,0,0,0,0};
-    int stuNumber = 0;
+    int stuNumber = 0, i = 0;
 
     loadStudentList(studentList, &stuNumber);
 
+    loadStudentMarks(studentMarks, studentList, &assignmentStatus[0], stuNumber);
+    puts("Name      ID    Assignmnet1  Assignment2  Assignment3  Assignment4  Assignment5  ");
+    for(int i = 0; i < stuNumber; i++){
+        printf("%-10s%-6d%-13f%-13f%-13f%-13f%-13f\n", studentMarks[i].name, studentMarks[i].studentID, studentMarks[i].assignment1, studentMarks[i].assignment2, studentMarks[i].assignment3, studentMarks[i].assignment4,studentMarks[i].assignment5);
+    }
 
     return 0;
 }
@@ -70,23 +75,70 @@ int loadStudentList(struct stu *studentList, int *stuNumber){
     return 0;
 }
 
-int loadStudentMarks(struct stuNMarks *studentMarks, int *assignmentStatus){
+int loadStudentMarks(struct stuNMarks *studentMarks, struct stu *studentList, int* assignmentStatus, int stuNumber){
     FILE *markp;
     FILE *namep;
     char studentNameBuffer[10], firstLineBuffer[256];
+    int index = 0, i = 0;
 
     markp = fopen("marks.txt", "r");
     if(markp == NULL){
-        namep = fopen("students.txt", "r");
-        if(namep == NULL){
-            puts("Fatal Error: Unable to load students list.");
-            return -1;
-        }
-        fclose(namep);
         return 0;
     }
 
+    fscanf(markp, "%[^\n]\n", firstLineBuffer);
 
+    while(firstLineBuffer[i] != '\0'){
+        switch(firstLineBuffer[i]){
+            case '1':
+                assignmentStatus[0] = 1;
+                break;
+            case '2':
+                assignmentStatus[1] = 1;
+                break;
+            case '3':
+                assignmentStatus[2] = 1;
+                break;
+            case '4':
+                assignmentStatus[3] = 1;
+                break;
+            case '5':
+                assignmentStatus[4] = 1;
+                break;
+        }
+        i++;
+    }
+
+    while((fscanf(markp, "%[^ ]%d", studentNameBuffer, &studentMarks[index].studentID)) != EOF || index < stuNumber){
+		strcpy(studentMarks[index].name, studentNameBuffer);
+        if(assignmentStatus[0] == 1){
+            fscanf(markp, "%f", &studentMarks[index].assignment1);
+        }else{
+			studentMarks[index].assignment1 = 0.0;
+		}
+        if(assignmentStatus[1] == 1){
+            fscanf(markp, "%f", &studentMarks[index].assignment2);
+        }else{
+			studentMarks[index].assignment2 = 0.0;
+		}
+        if(assignmentStatus[2] == 1){
+            fscanf(markp, "%f", &studentMarks[index].assignment3);
+        }else{
+			studentMarks[index].assignment3 = 0.0;
+		}
+        if(assignmentStatus[3] == 1){
+            fscanf(markp, "%f", &studentMarks[index].assignment4);
+        }else{
+			studentMarks[index].assignment4 = 0.0;
+		}
+        if(assignmentStatus[4] == 1){
+            fscanf(markp, "%f", &studentMarks[index].assignment5);
+        }else{
+			studentMarks[index].assignment5 = 0.0;
+		}
+            fscanf(markp, "\n");
+        index++;
+    }
 
     fclose(markp);
     return 0;

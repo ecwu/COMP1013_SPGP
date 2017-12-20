@@ -2,3 +2,8 @@ Name      ID    Assignment1  Assignment2  Assignment3
 Tony      1234  3.5          4            3.5          
 Andrew    2345  4            3            2.5          
 Amy       3456  2            3.5          4            
+Judy      4567  4            2            2.5          
+Jack      5678  2.5          1.5          2.5          
+Otto      6789  3.5          2.5          3            
+Irving    7890  3            4            4            
+Cheryl    8901  4            4            4            
