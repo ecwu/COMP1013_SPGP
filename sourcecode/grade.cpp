@@ -72,15 +72,22 @@ int loadStudentList(struct stu *studentList, int *stuNumber){
 
 int loadStudentMarks(struct stuNMarks *studentMarks, int *assignmentStatus){
     FILE *markp;
+    FILE *namep;
     char studentNameBuffer[10], firstLineBuffer[256];
 
-    markp = fopen("students.txt", "r");
-    if(namep == NULL){
+    markp = fopen("marks.txt", "r");
+    if(markp == NULL){
+        namep = fopen("students.txt", "r");
+        if(namep == NULL){
+            puts("Fatal Error: Unable to load students list.");
+            return -1;
+        }
+        fclose(namep);
         return 0;
     }
 
 
-    
+
     fclose(markp);
     return 0;
 
