@@ -19,6 +19,7 @@ struct stuNMarks{
 int gradeFunction();
 int loadStudentList(struct stu *studentList, int *stuNumber);
 int loadStudentMarks(struct stuNMarks *studentMarks, struct stu *studentList, int* assignmentStatus, int stuNumber);
+void loadStudentMarksInit(struct stuNMarks *studentMarks, struct stu *studentList, int stuNumber);
 
 int main(){
     int input = 0;
@@ -77,12 +78,12 @@ int loadStudentList(struct stu *studentList, int *stuNumber){
 
 int loadStudentMarks(struct stuNMarks *studentMarks, struct stu *studentList, int* assignmentStatus, int stuNumber){
     FILE *markp;
-    FILE *namep;
     char studentNameBuffer[10], firstLineBuffer[256];
     int index = 0, i = 0;
 
     markp = fopen("marks.txt", "r");
     if(markp == NULL){
+        loadStudentMarksInit(studentMarks, studentList, stuNumber);
         return 0;
     }
 
@@ -143,4 +144,16 @@ int loadStudentMarks(struct stuNMarks *studentMarks, struct stu *studentList, in
     fclose(markp);
     return 0;
 
+}
+
+void loadStudentMarksInit(struct stuNMarks *studentMarks, struct stu *studentList, int stuNumber){
+    for (int i = 0; i < stuNumber; i++){
+        strcpy(studentMarks[i].name, studentList[i].name);
+        studentMarks[i].studentID = studentList[i].studentID;
+        studentMarks[i].assignment1 = 0.0;
+        studentMarks[i].assignment2 = 0.0;
+        studentMarks[i].assignment3 = 0.0;
+        studentMarks[i].assignment4 = 0.0;
+        studentMarks[i].assignment5 = 0.0;
+    }
 }
