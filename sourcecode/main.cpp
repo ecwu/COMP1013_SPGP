@@ -23,7 +23,7 @@ int main(){
 }
 
 void listFunction() {
-	int i;
+	int select;
 
 	do {
 
@@ -43,11 +43,23 @@ void listFunction() {
 		printf("\n\n\n\n");
 
 		printf("Please Input Number:");
-		scanf("%d", &i);
+		scanf("%d", &select);
 
-		switch (i) {
-
-			default: printf("Number should between 1 -- 4!\n");
+		switch (select) {
+			case 1:
+				puts("Comming soon");
+				break;
+			case 2:
+				puts("Comming soon");
+				break;
+			case 3:
+				puts("Comming soon");
+				break;
+			case 4:
+				puts("Quitting the system...");
+				return 0;
+				break;
+			default: printf("%d is an invalid Input: Number should between 1 -- 4!\n", select);
 		}
 
 	} while (1);

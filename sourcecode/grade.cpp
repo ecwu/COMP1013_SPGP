@@ -45,7 +45,7 @@ int gradeFunction(){
     loadStudentMarks(studentMarks, studentList, &assignmentStatus[0], stuNumber);
     puts("Name      ID    Assignmnet1  Assignment2  Assignment3  Assignment4  Assignment5  ");
     for(int i = 0; i < stuNumber; i++){
-        printf("%-10s%-6d%-13f%-13f%-13f%-13f%-13f\n", studentMarks[i].name, studentMarks[i].studentID, studentMarks[i].assignment1, studentMarks[i].assignment2, studentMarks[i].assignment3, studentMarks[i].assignment4,studentMarks[i].assignment5);
+        printf("%-10s%-6d%-13.2f%-13.2f%-13.2f%-13.2f%-13.2f\n", studentMarks[i].name, studentMarks[i].studentID, studentMarks[i].assignment1, studentMarks[i].assignment2, studentMarks[i].assignment3, studentMarks[i].assignment4,studentMarks[i].assignment5);
     }
 
     return 0;
