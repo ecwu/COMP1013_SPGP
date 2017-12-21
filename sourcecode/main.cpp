@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include "relay.h"
 
 void listFunction();
 
@@ -34,7 +35,7 @@ void listFunction() {
 		printf("\t\t|    Please Select The Following Functions:     |\n");
 		printf("\t\t|                                               |\n");
 		printf("\t\t|   -Grade-			-- Press 1	|\n");
-		printf("\t\t|   -Inquiry-		-- Press 2	|\n");
+		printf("\t\t|   -Inquiry-			-- Press 2	|\n");
 		printf("\t\t|   -Sort-			-- Press 3	|\n");
 		printf("\t\t|   -Quit-			-- Press 4	|\n");
 		printf("\t\t|                                               |\n");
@@ -47,17 +48,16 @@ void listFunction() {
 
 		switch (select) {
 			case 1:
-				puts("Comming soon");
-				break;
+				gradeFunction();
 			case 2:
-				puts("Comming soon");
+				Inquiry();
 				break;
 			case 3:
 				puts("Comming soon");
 				break;
 			case 4:
 				puts("Quitting the system...");
-				return 0;
+				return;
 				break;
 			default: printf("%d is an invalid Input: Number should between 1 -- 4!\n", select);
 		}

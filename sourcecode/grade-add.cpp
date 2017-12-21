@@ -23,19 +23,19 @@ void loadStudentMarksInit(struct stuNMarks *studentMarks, struct stu *studentLis
 int indexReader(int *assignmentNO, int *questionNO, int* assignmentStatus);
 int grading(struct stuNMarks *studentMarks, int assignmentNO, int questionNO, int stuNumber);
 
-int main(){
-    int input = 0;
-    puts("input 1 / 0 to run / terminate");
-    scanf("%d", &input);
-    switch(input){
-        case 1:
-            gradeFunction();
-            break;
-        default:
-            return 0;
-    }
-    return 0;
-}
+// int main(){
+//     int input = 0;
+//     puts("input 1 / 0 to run / terminate");
+//     scanf("%d", &input);
+//     switch(input){
+//         case 1:
+//             gradeFunction();
+//             break;
+//         default:
+//             return 0;
+//     }
+//     return 0;
+// }
 int gradeFunction(){
     struct stu studentList[20];
     struct stuNMarks studentMarks[20];
