@@ -241,6 +241,6 @@ int grading(struct stuNMarks *studentMarks, int assignmentNO, int questionNO, in
         }
         marksum = 0;
     }
-    printf("Finished the grading for assignment %d", assignmentNO);
+    printf("Finished the grading for assignment %d\n", assignmentNO);
     return 0;
 }
