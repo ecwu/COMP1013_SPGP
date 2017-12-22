@@ -34,10 +34,10 @@ void listFunction() {
 		printf("\t\t|                                               |\n");
 		printf("\t\t|    Please Select The Following Functions:     |\n");
 		printf("\t\t|                                               |\n");
-		printf("\t\t|   -Grade-			-- Press 1	|\n");
-		printf("\t\t|   -Inquiry-			-- Press 2	|\n");
-		printf("\t\t|   -Sort-			-- Press 3	|\n");
-		printf("\t\t|   -Quit-			-- Press 4	|\n");
+		printf("\t\t|   $$-Grade-			-- Press 1	|\n");
+		printf("\t\t|   $$-Inquiry-			-- Press 2	|\n");
+		printf("\t\t|   $$-Sort-			-- Press 3	|\n");
+		printf("\t\t|   $$-Quit-			-- Press 4	|\n");
 		printf("\t\t|                                               |\n");
 		printf("\t\t|$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$|\n");
 
@@ -49,6 +49,7 @@ void listFunction() {
 		switch (select) {
 			case 1:
 				gradeFunction();
+				break;
 			case 2:
 				Inquiry();
 				break;
@@ -57,7 +58,7 @@ void listFunction() {
 				break;
 			case 4:
 				puts("Quitting the system...");
-				return;
+				exit(0);
 				break;
 			default: printf("%d is an invalid Input: Number should between 1 -- 4!\n", select);
 		}

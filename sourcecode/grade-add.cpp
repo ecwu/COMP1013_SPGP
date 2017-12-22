@@ -22,6 +22,7 @@ int loadStudentMarks(struct stuNMarks *studentMarks, struct stu *studentList, in
 void loadStudentMarksInit(struct stuNMarks *studentMarks, struct stu *studentList, int stuNumber);
 int indexReader(int *assignmentNO, int *questionNO, int* assignmentStatus);
 int grading(struct stuNMarks *studentMarks, int assignmentNO, int questionNO, int stuNumber);
+int writeStudentMarks(struct stuNMarks *studentMarks, int stuNumber, int* assignmentStatus);
 
 // int main(){
 //     int input = 0;
@@ -58,6 +59,7 @@ int gradeFunction(){
         printf("%-10s%-6d%-13.2f%-13.2f%-13.2f%-13.2f%-13.2f\n", studentMarks[i].name, studentMarks[i].studentID, studentMarks[i].assignment1, studentMarks[i].assignment2, studentMarks[i].assignment3, studentMarks[i].assignment4,studentMarks[i].assignment5);
     }
     
+    writeStudentMarks(studentMarks, stuNumber, &assignmentStatus[0]);
 
     return 0;
 }
@@ -182,12 +184,13 @@ int indexReader(int *assignmentNO, int *questionNO, int* assignmentStatus){
         *assignmentNO = assignment;
     }
     *assignmentNO = assignment;
+    assignmentStatus[assignment - 1] = 1;
     printf("You'are grading Assignment %d, How many question in this assignment?(Enter a Number from 1 -- 10):\n", assignment);
     scanf("%d", &question);
     while(!(question >= 1 && question <= 10)){
         puts("Error: The data you entered is invalid, Please enter a Number from 1 -- 10:\n");
         scanf("%d", &question);
-    }
+    }// Need Exception handling
     *questionNO = question;
 	return 0;
 }
@@ -242,5 +245,47 @@ int grading(struct stuNMarks *studentMarks, int assignmentNO, int questionNO, in
         marksum = 0;
     }
     printf("Finished the grading for assignment %d\n", assignmentNO);
+    return 0;
+}
+
+int writeStudentMarks(struct stuNMarks *studentMarks, int stuNumber, int* assignmentStatus){
+    FILE *markp;
+
+    markp = fopen("marks.txt", "w");
+    if(markp == NULL){
+        puts("Fatal Error: Unable to write student marks list.");
+        return -1;
+    }
+
+    fprintf(markp, "Name      ID    ");
+    for (int i = 0; i < 5; i++){
+        if(assignmentStatus[i] == 1){
+            fprintf(markp, "Assignment%d  ", i + 1);
+        }
+    }
+    fprintf(markp, "\n");
+
+    for(int i = 0; i < stuNumber; i++){
+        fprintf(markp, "%-10s%-6d", studentMarks[i].name, studentMarks[i].studentID);
+        if(assignmentStatus[0] == 1){
+            fprintf(markp, "%-13.2f", studentMarks[i].assignment1);
+        }
+        if(assignmentStatus[1] == 1){
+            fprintf(markp, "%-13.2f", studentMarks[i].assignment2);
+        }
+        if(assignmentStatus[2] == 1){
+            fprintf(markp, "%-13.2f", studentMarks[i].assignment3);
+        }
+        if(assignmentStatus[3] == 1){
+            fprintf(markp, "%-13.2f", studentMarks[i].assignment4);
+        }
+        if(assignmentStatus[4] == 1){
+            fprintf(markp, "%-13.2f", studentMarks[i].assignment5);
+        }
+        fprintf(markp, "\n");
+    }
+
+    printf("Output the data successful.\n");
+    fclose(markp);
     return 0;
 }
