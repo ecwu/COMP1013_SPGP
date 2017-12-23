@@ -13,7 +13,7 @@
 void listFunction();
 
 int main(){
-	char version[] = "0.0.1";
+	char version[] = "0.1.3";
 	printf("Welcome to Score Management System %s\n\n\n", version);
 
 	while (1) {
