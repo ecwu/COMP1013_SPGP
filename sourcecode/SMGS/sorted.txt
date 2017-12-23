@@ -1,6 +1,0 @@
-Name      ID    Total  
-Andrew    2345  17.30  
-Tony      1234  16.10  
-Amy       3456  15.10  
-Max Gu    2333  12.90  
-Jack Wu   1233  12.70  

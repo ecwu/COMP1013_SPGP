@@ -1,6 +1,0 @@
-Name      ID    Assignment1  Assignment2  Assignment3  Assignment4  Assignment5  
-Tony      1234  4.00         2.60         3.00         3.50         3.00         
-Andrew    2345  4.00         2.80         4.00         3.50         3.00         
-Amy       3456  4.00         2.60         3.00         2.50         3.00         
-Jack Wu   1233  4.00         2.20         2.00         1.50         3.00         
-Max Gu    2333  4.00         2.40         1.00         2.50         3.00         
