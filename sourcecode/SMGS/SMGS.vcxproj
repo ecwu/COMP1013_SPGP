@@ -121,6 +121,7 @@
   <ItemGroup>
     <ClCompile Include="grade.cpp" />
     <ClCompile Include="inquiry.cpp" />
+    <ClCompile Include="iomodule.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="sort.cpp" />
   </ItemGroup>

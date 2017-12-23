@@ -1,9 +1,10 @@
-#pragma once
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 struct stu {
 	char name[11];
 	int studentID;
 };
-
 struct stuNMarks {
 	char name[11];
 	int studentID;
@@ -13,13 +14,11 @@ struct stuNMarks {
 	float assignment4;
 	float assignment5;
 };
-
 struct stuNSum {
 	char name[11];
 	int studentID;
 	float sum;
 };
-
 struct marksNPointer {
 	char name[11];
 	int studentID;
@@ -27,6 +26,7 @@ struct marksNPointer {
 	struct marksNPointer *nextNode;
 };
 
+void listFunction();
 int gradeFunction();
 int loadStudentList(struct stu *studentList, int *stuNumber);
 int loadStudentMarks(struct stuNMarks *studentMarks, struct stu *studentList, int* assignmentStatus, int stuNumber);

@@ -1,19 +1,9 @@
-/*
-Structure Programming Group Project
-Group Menber: Jack Wu, Irving Sau, Otto Zhang, Cheryl Shen.
-Create Time: 2017-12-13
-*/
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "relay.h"
 
-void listFunction();
 
 int main() {
 	char version[] = "0.6.0";
-	printf("Welcome to Score Management System %s\n\n\n", version);
+	printf("Welcome to Score Management System %s\n", version);
 
 	while (1) {
 		listFunction();
