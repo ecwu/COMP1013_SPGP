@@ -2,10 +2,10 @@
 
 
 int main() {
-	char version[] = "0.7.0";
-	printf("Welcome to Score Management System %s\n", version);
+	char version[] = "1.0.0"; // version number
+	printf("Welcome to Grade Management System %s\n", version);
 
-	while (1) {
+	while (1) { // Output start menu
 		listFunction();
 	}
 
@@ -18,7 +18,7 @@ void listFunction() {
 	do {
 		printf("\t\t|$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$|\n");
 		printf("\t\t|                                               |\n");
-		printf("\t\t|       Welcome to Use Grade System         	|\n");
+		printf("\t\t|    Welcome to Use Grade Management System     |\n");
 		printf("\t\t|                                               |\n");
 		printf("\t\t|    Please Select The Following Functions:     |\n");
 		printf("\t\t|                                               |\n");
@@ -29,21 +29,21 @@ void listFunction() {
 		printf("\t\t|                                               |\n");
 		printf("\t\t|$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$|\n");
 		printf("Please Input Number:");
-		scanf("%d", &select);
+		scanf("%d", &select); // Read user's input
 
 		switch (select) {
 		case 1:
-			gradeFunction();
+			grade(); // Call the garde function
 			break;
 		case 2:
-			inquiry();
+			inquiry(); // Call the inquiry function
 			break;
 		case 3:
-			sort();
+			sort(); // Call the sort function
 			break;
 		case 4:
 			puts("Quitting the system...");
-			exit(0);
+			exit(0); // Terminate the program
 			break;
 		default: printf("%d is an invalid Input: Number should between 1 -- 4!\n", select);
 		}
