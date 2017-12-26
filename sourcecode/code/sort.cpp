@@ -12,58 +12,12 @@ int sort() {
 		return -1;
 	}
 
-	bubbleSort(studentMarks, stuNumber);
 	marksToSum(studentMarks, studentSum, stuNumber);
+	bubbleSort(studentSum, stuNumber);
 	writeStudentSum(studentSum, stuNumber);
 
 	loadSortedList(stuNumber);
 	printf("\n");
-
-	return 0;
-}
-
-int bubbleSort(struct stuNMarks *studentMarks, int stuNumber) {
-	char studentNameTemp[11]; // name buffer for swap
-	int studentIDTemp = 0; // id buffer for swap
-	float studentMarksSumi = 0.0, studentMarksSumj = 0.0; // Marks sum for compare
-	float studentAssignment1 = 0.0, studentAssignment2 = 0.0, studentAssignment3 = 0.0, studentAssignment4 = 0.0, studentAssignment5 = 0.0;
-	/*Assignments buffers for swap*/
-
-	for (int i = 0; i < stuNumber; i++) { // bubble sort
-		studentMarksSumi = studentMarks[i].assignment1 + studentMarks[i].assignment2 + studentMarks[i].assignment3 + studentMarks[i].assignment4 + studentMarks[i].assignment5;
-		for (int j = i; j < stuNumber; j++) {
-			studentMarksSumj = studentMarks[j].assignment1 + studentMarks[j].assignment2 + studentMarks[j].assignment3 + studentMarks[j].assignment4 + studentMarks[j].assignment5;
-			if (studentMarksSumi < studentMarksSumj) { // If the previous one is smaller than the last one
-
-				strcpy(studentNameTemp, studentMarks[j].name);
-				studentIDTemp = studentMarks[j].studentID;
-				studentAssignment1 = studentMarks[j].assignment1;
-				studentAssignment2 = studentMarks[j].assignment2;
-				studentAssignment3 = studentMarks[j].assignment3;
-				studentAssignment4 = studentMarks[j].assignment4;
-				studentAssignment5 = studentMarks[j].assignment5;
-				// the last one to buffers
-
-				strcpy(studentMarks[j].name, studentMarks[i].name);
-				studentMarks[j].studentID = studentMarks[i].studentID;
-				studentMarks[j].assignment1 = studentMarks[i].assignment1;
-				studentMarks[j].assignment2 = studentMarks[i].assignment2;
-				studentMarks[j].assignment3 = studentMarks[i].assignment3;
-				studentMarks[j].assignment4 = studentMarks[i].assignment4;
-				studentMarks[j].assignment5 = studentMarks[i].assignment5;
-				// the previous one to the last one
-
-				strcpy(studentMarks[i].name, studentNameTemp);
-				studentMarks[i].studentID = studentIDTemp;
-				studentMarks[i].assignment1 = studentAssignment1;
-				studentMarks[i].assignment2 = studentAssignment2;
-				studentMarks[i].assignment3 = studentAssignment3;
-				studentMarks[i].assignment4 = studentAssignment4;
-				studentMarks[i].assignment5 = studentAssignment5;
-				//buffer to the the previous
-			}
-		}
-	}
 
 	return 0;
 }
@@ -75,6 +29,35 @@ int marksToSum(struct stuNMarks *studentMarks, struct stuNSum *studentSum, int s
 		studentSum[i].studentID = studentMarks[i].studentID;
 		studentSum[i].sum = studentMarks[i].assignment1 + studentMarks[i].assignment2 + studentMarks[i].assignment3 + studentMarks[i].assignment4 + studentMarks[i].assignment5;
 	}
+	return 0;
+}
+
+int bubbleSort(struct stuNSum *studentSum, int stuNumber) {
+	char studentNameTemp[11]; // name buffer for swap
+	int studentIDTemp = 0; // id buffer for swap
+	float studentMarksTotal = 0.0; // Marks sum for compare
+
+	for (int i = 0; i < stuNumber; i++) { // bubble sort
+		for (int j = i + 1; j < stuNumber; j++) {
+			if (studentSum[i].sum < studentSum[j].sum) { // If the previous one is smaller than the last one
+				strcpy(studentNameTemp, studentSum[j].name);
+				studentIDTemp = studentSum[j].studentID;
+				studentMarksTotal = studentSum[j].sum;
+				// the last one to buffers
+
+				strcpy(studentSum[j].name, studentSum[i].name);
+				studentSum[j].studentID = studentSum[i].studentID;
+				studentSum[j].sum = studentSum[i].sum;
+				// the previous one to the last one
+
+				strcpy(studentSum[i].name, studentNameTemp);
+				studentSum[i].studentID = studentIDTemp;
+				studentSum[i].sum = studentMarksTotal;
+				//buffer to the the previous
+			}
+		}
+	}
+
 	return 0;
 }
 

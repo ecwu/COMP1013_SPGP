@@ -57,8 +57,8 @@ int inquiryByStudentId(struct stuNMarks *studentMarks, int* assignmentStatus, in
 void subListFunction(); // Output the Sub Menu for inquiry
 
 int sort(); // Start the Sort Process
-int bubbleSort(struct stuNMarks *studentMarks, int stuNumber); // Bubble Sort the elements in struct (according to total score)
 int marksToSum(struct stuNMarks *studentMarks, struct stuNSum *studentSum, int stuNumber); // rewrite the marks struct to total marks struct
+int bubbleSort(struct stuNSum *studentSum, int stuNumber); // Bubble Sort the elements in struct (according to total score)
 int writeStudentSum(struct stuNSum *studentSum, int stuNumber); // write the struct to sorted.txt
 int loadSortedList(int stuNumber); // load the info from sorted.txt to a linked list
 int outputLinkedList(struct marksNPointer *current); // Display the info from the linked list

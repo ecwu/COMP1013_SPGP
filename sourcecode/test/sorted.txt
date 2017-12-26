@@ -1,0 +1,8 @@
+Name      ID    Total  
+Jack Wu   1234  4.00   
+ANBUL     7984  0.50   
+Irving    6432  3.50   
+Max Gu    2333  4.00   
+Cheryl    1233  0.50   
+Otto      3456  3.50   
+Brady     2345  0.00   
