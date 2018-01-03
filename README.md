@@ -1,3 +1,4 @@
+## *This project is archived*
 # Structured Programming Group Project
 > Repo for UICcst 16 Y2A Structured Programming Group Project.
 
@@ -11,4 +12,10 @@
 2. Language: `C`
 3. Environment: Visual C++ 2010 Express
 
-# EOF
+## Requirements
+[Common Requirement](https://github.com/ecwu/Strugramming/blob/master/documents/requirement.md)
+
+Specific Requirements:
+- [Issue 9](https://github.com/ecwu/Strugramming/issues/9)
+- [Issue 10](https://github.com/ecwu/Strugramming/issues/10)
+- [Issue 11](https://github.com/ecwu/Strugramming/issues/11)
