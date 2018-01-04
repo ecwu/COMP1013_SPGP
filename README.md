@@ -19,3 +19,6 @@ Specific Requirements:
 - [Issue 9](https://github.com/ecwu/Strugramming/issues/9)
 - [Issue 10](https://github.com/ecwu/Strugramming/issues/10)
 - [Issue 11](https://github.com/ecwu/Strugramming/issues/11)
+
+## Special Thanks
+Thanks to [Max Gu](https://github.com/guxianggao)
